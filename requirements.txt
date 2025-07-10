@@ -1,5 +1,7 @@
 numpy
 torch
+torchvision
 scikit-learn
 streamlit
 pandas
+pillow
