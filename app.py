@@ -1,5 +1,5 @@
 # app.py
-
+import os
 import streamlit as st
 import torch
 from PIL import Image
@@ -21,7 +21,10 @@ st.set_page_config(
 
 # --- Global Constants ---
 # PASTIKAN SELALU GUNAKAN BOBOT MODEL YANG SUDAH DILATIH!!
-MODEL_PATH = 'D:\KULIAH\Data Science\Belajar_Deploy_ML\model_NN_simple.pth' # Pastikan ini adalah path bobot model yang telah disimpan
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(SCRIPT_DIR,'Model_NN_simple.pth')
+#PATH LOcal
+# MODEL_PATH = 'D:\KULIAH\Data Science\Belajar_Deploy_ML\model_NN_simple.pth' # Pastikan ini adalah path bobot model yang telah disimpan
 NUM_CLASSES = 10 # Jumlah kelas, Contoh:Terdapat 10 kelas
 
 # CIFAR-10 class names
